@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hashnsalt/React-test/static/css/main.964fdded.css",
-    "main.js": "/hashnsalt/React-test/static/js/main.0ebb9cd6.js",
+    "main.js": "/hashnsalt/React-test/static/js/main.dfe4090c.js",
     "static/js/787.23170c61.chunk.js": "/hashnsalt/React-test/static/js/787.23170c61.chunk.js",
     "index.html": "/hashnsalt/React-test/index.html",
     "main.964fdded.css.map": "/hashnsalt/React-test/static/css/main.964fdded.css.map",
-    "main.0ebb9cd6.js.map": "/hashnsalt/React-test/static/js/main.0ebb9cd6.js.map",
+    "main.dfe4090c.js.map": "/hashnsalt/React-test/static/js/main.dfe4090c.js.map",
     "787.23170c61.chunk.js.map": "/hashnsalt/React-test/static/js/787.23170c61.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.0ebb9cd6.js"
+    "static/js/main.dfe4090c.js"
   ]
 }
