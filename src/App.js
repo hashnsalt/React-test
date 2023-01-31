@@ -4,12 +4,16 @@ import data from './pages/shopData';
 import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
 import About from './pages/About';
 import Details from './pages/Details';
+import Cart from './pages/Cart';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from './pages/store';
 
 function App() {
 
   const navigate = useNavigate();
   const [bests] = useState(data);
+  const dispatch = useDispatch();
 
   return (
     <div className="App">
@@ -44,12 +48,19 @@ function App() {
             >
               Infomation
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               onClick={() => {
                 navigate("/detail");
               }}
             >
               Detail
+            </Nav.Link> */}
+            <Nav.Link
+              onClick={() => {
+                navigate("/cart");
+              }}
+            >
+              Cart
             </Nav.Link>
           </Nav>
         </Container>
@@ -72,6 +83,9 @@ function App() {
                           <p>{best.desc}</p>
                           <p>{best.price}원</p>
                         </Link>
+                        <button onClick={() => [
+                          dispatch(addItem({id: best.id, title: best.title, count: 1}))
+                        ]}>장바구니</button>
                       </Col>
                     );
                   })
@@ -85,6 +99,7 @@ function App() {
           <Route path="loca" element={<div>location</div>} />
         </Route>
         <Route path="detail/:id" element={<Details bes={bests}/>} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
     </div>
   );
